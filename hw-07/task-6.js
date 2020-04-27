@@ -33,11 +33,12 @@ const dataLength = inputInform.dataset.length;
 inputInform.addEventListener('change', checkValid);
 
 function checkValid(event) {
-  if (event.currentTarget.value.length == dataLength) {
+  if (event.currentTarget.value.length === Number(dataLength)) {
     inputInform.classList.add('valid');
     inputInform.classList.remove('invalid');
   } else {
     inputInform.classList.add('invalid');
+    inputInform.classList.remove('valid');
   }
 }
 

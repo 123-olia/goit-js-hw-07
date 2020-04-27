@@ -14,5 +14,7 @@ inputInform.addEventListener('input', changeName);
 function changeName(event) {
   if (event.currentTarget.value.length !== 0) {
     outputInform.textContent = event.currentTarget.value;
+  } else {
+    outputInform.textContent = 'незнакомец';
   }
 }

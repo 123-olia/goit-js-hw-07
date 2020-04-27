@@ -12,16 +12,17 @@
 </div>
 */
 
+const output = document.querySelector('#value');
 let counterValue = 0;
 
 const increment = function () {
   counterValue += 1;
-  document.querySelector('#value').textContent = counterValue;
+  output.textContent = counterValue;
 };
 
 const decrement = function () {
   counterValue -= 1;
-  document.querySelector('#value').textContent = counterValue;
+  output.textContent = counterValue;
 };
 
 document

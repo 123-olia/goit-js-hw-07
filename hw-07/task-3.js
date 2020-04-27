@@ -45,10 +45,11 @@ const images = [
   },
 ];
 
-for (let i = 0; i < images.length; i++) {
-  const gallery = document.querySelector('#gallery');
-  gallery.insertAdjacentHTML(
-    'afterbegin',
-    `<li class="shadow"><img  src="${images[i].url}" alt="${images[i].alt}" ></li>`,
-  );
-}
+const gallery = images.reduce((acc, el) => {
+  acc += `<li class="image"> <img src="${el.url} alt="${el.alt}/> </li>`;
+  return acc;
+}, []);
+// console.log(gallery);
+
+const list = document.querySelector('#gallery');
+list.insertAdjacentHTML('afterbegin', gallery);

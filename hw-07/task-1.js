@@ -14,12 +14,17 @@
 const catsQuantity = document.querySelectorAll('.item');
 console.log(`В списке ${catsQuantity.length} категории.`);
 
-for (let i = 0; i < catsQuantity.length; i++) {
-  const el = catsQuantity[i];
-  const title = el.querySelector('h2');
-  const list = el.querySelectorAll('li');
-  console.log(
-    `Категория: ${title.textContent} 
-    Количество элементов: ${list.length}`,
-  );
-}
+catsQuantity.forEach(item =>
+  console.log(`Категория: ${item.querySelector('h2').textContent}
+Количество элементов: ${item.querySelectorAll('li').length}`),
+);
+
+// for (let i = 0; i < catsQuantity.length; i++) {
+//   const el = catsQuantity[i];
+//   const title = el.querySelector('h2');
+//   const list = el.querySelectorAll('li');
+//   console.log(
+//     `Категория: ${title.textContent}
+//     Количество элементов: ${list.length}`,
+//   );
+// }

@@ -24,11 +24,21 @@ const ingredients = [
   'Приправы',
 ];
 
-for (let i = 0; i < ingredients.length; i++) {
-  const creatorLi = document.createElement('li');
-  creatorLi.textContent = ingredients[i];
-  // console.log(creatorLi);
+const ingred = document.querySelector('#ingredients');
 
-  const ingred = document.querySelector('#ingredients');
-  ingred.appendChild(creatorLi);
-}
+const items = ingredients.map(ingredient => {
+  const creatorLi = document.createElement('li');
+  creatorLi.textContent = ingredient;
+  return creatorLi;
+});
+
+ingred.append(...items);
+
+// for (let i = 0; i < ingredients.length; i++) {
+//   const creatorLi = document.createElement('li');
+//   creatorLi.textContent = ingredients[i];
+//   // console.log(creatorLi);
+
+//   const ingred = document.querySelector('#ingredients');
+//   ingred.appendChild(creatorLi);
+// }
